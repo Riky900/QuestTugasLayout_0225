@@ -58,6 +58,16 @@ fun MainScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(Modifier.height(dimensionResource(R.dimen.title_top_space)))
+            ProfileCard(
+                name = stringResource(R.string.name_1),
+                address = stringResource(R.string.address_1),
+                backgroundColor = colorResource(R.color.card_gray),
+                addressColor = colorResource(R.color.text_yellow),
+                nameFontFamily = FontFamily(Font(R.font.dancing_script)),
+                nameFontWeight = FontWeight.Normal,
+                nameFontSize = dimensionResource(R.dimen.name_script_size).value.sp
+            )
+            Spacer(Modifier.height(dimensionResource(R.dimen.card_gap)))
             Text(
                 text = stringResource(R.string.title),
                 color = colorResource(R.color.text_black),
