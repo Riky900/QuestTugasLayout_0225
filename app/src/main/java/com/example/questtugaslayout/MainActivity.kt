@@ -77,3 +77,44 @@ fun MainScreen() {
         }
     }
 }
+@Composable
+fun ProfileCard(
+    name: String,
+    address: String,
+    backgroundColor: Color,
+    addressColor: Color,
+    modifier: Modifier = Modifier,
+    nameColor: Color = colorResource(R.color.text_white),
+    nameFontFamily: FontFamily? = null,
+    nameFontWeight: FontWeight = FontWeight.Bold,
+    nameFontSize: TextUnit = dimensionResource(R.dimen.name_size).value.sp
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(dimensionResource(R.dimen.card_corner)))
+            .background(backgroundColor)
+            .padding(dimensionResource(R.dimen.card_padding)),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = dimensionResource(R.dimen.card_padding)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.text_gap))
+        ) {
+            Text(
+                text = name,
+                color = nameColor,
+                fontSize = nameFontSize,
+                fontWeight = nameFontWeight,
+                fontFamily = nameFontFamily
+            )
+            Text(
+                text = address,
+                color = addressColor,
+                fontSize = dimensionResource(R.dimen.detail_size).value.sp
+            )
+        }
+    }
+}
