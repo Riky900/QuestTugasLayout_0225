@@ -58,6 +58,22 @@ fun MainScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(Modifier.height(dimensionResource(R.dimen.title_top_space)))
+            Text(
+                text = stringResource(R.string.title),
+                color = colorResource(R.color.text_black),
+                fontSize = dimensionResource(R.dimen.title_size).value.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = stringResource(R.string.subtitle),
+                color = colorResource(R.color.text_black),
+                fontSize = dimensionResource(R.dimen.subtitle_size).value.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center
+            )
+
+            Spacer(Modifier.height(dimensionResource(R.dimen.section_space)))
         }
     }
 }
