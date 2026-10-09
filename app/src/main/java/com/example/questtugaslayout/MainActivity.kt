@@ -84,6 +84,8 @@ fun ProfileCard(
     backgroundColor: Color,
     addressColor: Color,
     modifier: Modifier = Modifier,
+    phone: String? = null,
+    phoneColor: Color = colorResource(R.color.text_cyan),
     nameColor: Color = colorResource(R.color.text_white),
     nameFontFamily: FontFamily? = null,
     nameFontWeight: FontWeight = FontWeight.Bold,
@@ -110,6 +112,13 @@ fun ProfileCard(
                 fontWeight = nameFontWeight,
                 fontFamily = nameFontFamily
             )
+            if (phone != null) {
+                Text(
+                    text = phone,
+                    color = phoneColor,
+                    fontSize = dimensionResource(R.dimen.detail_size).value.sp
+                )
+            }
             Text(
                 text = address,
                 color = addressColor,
