@@ -108,7 +108,17 @@ fun MainScreen() {
                 address = stringResource(R.string.address_4),
                 backgroundColor = colorResource(R.color.card_green),
                 addressColor = colorResource(R.color.text_white)
+
             )
+
+            Spacer(Modifier.weight(1f))
+
+            Text(
+                text = stringResource(R.string.copyright),
+                color = colorResource(R.color.text_black),
+                fontSize = dimensionResource(R.dimen.copyright_size).value.sp
+            )
+            Spacer(Modifier.height(dimensionResource(R.dimen.screen_padding)))
         }
     }
 }
