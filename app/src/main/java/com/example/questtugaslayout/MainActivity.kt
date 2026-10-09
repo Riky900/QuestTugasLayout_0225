@@ -84,6 +84,31 @@ fun MainScreen() {
             )
 
             Spacer(Modifier.height(dimensionResource(R.dimen.section_space)))
+            ProfileCard(
+                name = stringResource(R.string.name_2),
+                phone = stringResource(R.string.phone_2),
+                address = stringResource(R.string.address_2),
+                backgroundColor = colorResource(R.color.card_purple),
+                addressColor = colorResource(R.color.text_yellow)
+            )
+            Spacer(Modifier.height(dimensionResource(R.dimen.card_gap)))
+
+            ProfileCard(
+                name = stringResource(R.string.name_3),
+                phone = stringResource(R.string.phone_3),
+                address = stringResource(R.string.address_3),
+                backgroundColor = colorResource(R.color.card_blue),
+                addressColor = colorResource(R.color.text_white)
+            )
+            Spacer(Modifier.height(dimensionResource(R.dimen.card_gap)))
+
+            ProfileCard(
+                name = stringResource(R.string.name_4),
+                phone = stringResource(R.string.phone_4),
+                address = stringResource(R.string.address_4),
+                backgroundColor = colorResource(R.color.card_green),
+                addressColor = colorResource(R.color.text_white)
+            )
         }
     }
 }
